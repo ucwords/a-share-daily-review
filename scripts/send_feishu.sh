@@ -48,8 +48,9 @@ if [[ ${#TEXT} -gt $MAX ]]; then
 ……（已截断）完整版见仓库 reports/"
 fi
 
-if [[ "$TEXT" != *"A股简报"* ]]; then
-  TEXT="【A股简报】
+# 飞书关键词：消息需含「A股复盘」或「A股早盘」（兼容旧词「A股简报」）
+if [[ "$TEXT" != *"A股复盘"* && "$TEXT" != *"A股早盘"* && "$TEXT" != *"A股简报"* ]]; then
+  TEXT="【A股复盘】
 ${TEXT}"
 fi
 

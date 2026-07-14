@@ -2,7 +2,7 @@
 
 | 任务 | 时间（北京） | 指令文件 | 报告 |
 |------|--------------|----------|------|
-| 盘后复盘 + 明日策略 | 如 22:00 | `AUTOMATION_INSTRUCTIONS.md` | `reports/YYYY-MM-DD.md` |
+| 每日复盘 + 明日策略 | 如 22:00 | `AUTOMATION_INSTRUCTIONS.md` | `reports/YYYY-MM-DD.md` |
 | 集合竞价后开盘策略 | **09:25 工作日** | `AUTOMATION_INSTRUCTIONS_MORNING.md` | `reports/YYYY-MM-DD-morning.md` |
 
 都不绑定读者实时仓位；策略写「计划新开 / 若已持有」。
@@ -20,7 +20,7 @@
 6. Active → 下一个交易日再验证（或交易日早上 Run now）
 
 飞书标题：
-- 盘后：`【A股简报】`
+- 盘后：`【A股复盘】`（Automations 名称可用：`每日复盘`）
 - 早盘：`【A股早盘】`
 
 ## 本地文件

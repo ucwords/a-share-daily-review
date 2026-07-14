@@ -4,7 +4,7 @@
 Trigger：**每周一至五 09:25（北京时间 GMT+8）**。  
 若界面按 UTC：约 `25 1 * * 1-5`（请以编辑器时区说明为准）。
 
-Repository：与盘后简报同一仓库 `a-share-daily-review`。
+Repository：与盘后复盘同一仓库 `a-share-daily-review`。
 
 ---
 
@@ -49,7 +49,7 @@ FEISHU_WEBHOOK_URL=https://open.feishu.cn/open-apis/bot/v2/hook/a6bb86c2-8239-4b
 
 | 自动化 | 时间 | 产出 |
 |--------|------|------|
-| 每日简报（盘后） | 如 22:00 | `reports/日期.md` +【A股简报】 |
+| 每日复盘（盘后） | 如 22:00 | `reports/日期.md` +【A股复盘】 |
 | 早盘竞价（本条） | 09:25 | `reports/日期-morning.md` +【A股早盘】 |
 
 两条独立、同一仓库、同一飞书群；靠标题区分。

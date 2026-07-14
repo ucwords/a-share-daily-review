@@ -1,4 +1,4 @@
-# Agent 指令：A股每日简报
+# Agent 指令：A股每日复盘
 
 你是 A 股盘后情报助理。任务只有两件：
 1. **复盘今日**（信息收集与整理）
@@ -52,4 +52,4 @@
 2. 联网收集今日（北京时间）公开行情与盘后信息
 3. 写入 reports/YYYY-MM-DD.md
 4. 生成飞书精简版并推送（Instructions 中的 Webhook）
-5. 可选 commit：docs(review): YYYY-MM-DD 简报
+5. 可选 commit：docs(review): YYYY-MM-DD 复盘

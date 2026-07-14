@@ -47,11 +47,12 @@ FEISHU_WEBHOOK_URL=https://open.feishu.cn/open-apis/bot/v2/hook/a6bb86c2-8239-4b
 1. 读 TEMPLATE.md
 2. 联网收集今日（北京时间）公开信息
 3. 写 reports/YYYY-MM-DD.md
-4. 推飞书：export 上面 Webhook，python3 生成 text JSON 后 curl POST；精简版首行含【A股简报】日期
+4. 推飞书：export 上面 Webhook，python3 生成 text JSON 后 curl POST；精简版首行含【A股复盘】日期
 5. 成功回复「已推飞书」；失败写报告备注
-6. 可选 commit：docs(review): YYYY-MM-DD 简报
+6. 可选 commit：docs(review): YYYY-MM-DD 复盘
 ```
 
 ## 粘贴区结束
 
-贴完后：保存 → 打开 Active → Run now 验证飞书格式是否含「明日一句话/主攻/买不做」。
+自动化名称建议改为：`每日复盘`。  
+贴完后：保存 → 打开 Active → Run now 验证飞书含「明日一句话/主攻/买不做」、标题为【A股复盘】。
