@@ -38,10 +38,18 @@
 - 不要把 Webhook 写入 reports 正文
 - 简体中文
 
-## 执行步骤
+## 交易日判定（最先执行）
+1. 用北京时间判断今日是否为 **上交所/深交所 A 股交易日**（周末休市；法定节假日及调休以交易所日历为准，可联网核实）。
+2. **非交易日：立即结束。**
+   - 不写 `reports/`
+   - 不推飞书
+   - 不 commit
+   - 仅在 Agent 回复写一行：`非交易日，跳过复盘与发送。`
+3. 仅交易日才继续下面步骤。
+
+## 执行步骤（仅交易日）
 1. 读 TEMPLATE.md（按结构填）
 2. 联网收集今日（北京时间）公开行情与盘后信息
-3. 非交易日：休市说明 + 下一交易日策略框架
-4. 写入 reports/YYYY-MM-DD.md
-5. 生成飞书精简版并推送（Instructions 中的 Webhook）
-6. 可选 commit：docs(review): YYYY-MM-DD 简报
+3. 写入 reports/YYYY-MM-DD.md
+4. 生成飞书精简版并推送（Instructions 中的 Webhook）
+5. 可选 commit：docs(review): YYYY-MM-DD 简报

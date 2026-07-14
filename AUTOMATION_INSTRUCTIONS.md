@@ -35,17 +35,21 @@ C. 明日推荐策略【建议=条件式】必须含：
 - 飞书精简版≤20行，必须含：定性、较昨日、主攻/备选、明日一句话、买/不做、置顶
 - 不要把 Webhook 写入报告正文
 
+## 交易日判定（最先执行，必须遵守）
+- 判断北京时间今日是否为上交所/深交所 A 股交易日（周末、法定节假日及调休休市；可联网核实）。
+- **非交易日：立即结束。不写报告、不推飞书、不 commit。仅回复：`非交易日，跳过复盘与发送。`**
+- 仅交易日才做复盘与推送。
+
 ## 飞书 Webhook
 FEISHU_WEBHOOK_URL=https://open.feishu.cn/open-apis/bot/v2/hook/a6bb86c2-8239-4b86-b824-857e4c8cffc9
 
-## 执行
+## 执行（仅交易日）
 1. 读 TEMPLATE.md
 2. 联网收集今日（北京时间）公开信息
-3. 非交易日：休市 + 下一交易日策略框架
-4. 写 reports/YYYY-MM-DD.md
-5. 推飞书：export 上面 Webhook，python3 生成 text JSON 后 curl POST；精简版首行含【A股简报】日期
-6. 成功回复「已推飞书」；失败写报告备注
-7. 可选 commit：docs(review): YYYY-MM-DD 简报
+3. 写 reports/YYYY-MM-DD.md
+4. 推飞书：export 上面 Webhook，python3 生成 text JSON 后 curl POST；精简版首行含【A股简报】日期
+5. 成功回复「已推飞书」；失败写报告备注
+6. 可选 commit：docs(review): YYYY-MM-DD 简报
 ```
 
 ## 粘贴区结束
