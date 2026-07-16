@@ -35,13 +35,15 @@
 - 高开过大提示兑现风险
 - 飞书 ≤18 行：须提「基于竞价成交额Top100」、定性、主攻、开盘一句话、买/不做、置顶
 - 标题含【A股早盘】；勿写入 Webhook
+- **飞书整次任务只 POST 一次**；禁止分段多条、全文+精简版各发；成功后写 `reports/YYYY-MM-DD-morning.feishu-sent`；若该标记已存在则不再推送
 
 ## 交易日判定（最先执行）
 非交易日：不写报告、不推飞书；仅回复 `非交易日，跳过早盘总结与发送。`
 
 ## 执行（仅交易日）
 1. 读 TEMPLATE_MORNING.md；对照最新盘后 reports
-2. 联网收集 **09:15–09:25 竞价成交额 Top100** 与竞价热点
-3. 写 reports/YYYY-MM-DD-morning.md
-4. 推飞书
-5. 可选 commit：docs(review): YYYY-MM-DD 早盘
+2. 若已存在 `reports/今日-morning.feishu-sent` → 可更新 md，但**禁止再推飞书**
+3. 联网收集 **09:15–09:25 竞价成交额 Top100** 与竞价热点
+4. 写 reports/YYYY-MM-DD-morning.md
+5. **仅一次**推飞书精简版 → 创建 `.feishu-sent` 标记
+6. 可选 commit：docs(review): YYYY-MM-DD 早盘

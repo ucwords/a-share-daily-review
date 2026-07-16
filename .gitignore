@@ -3,3 +3,6 @@ config/feishu.local.env
 *.local.env
 .env
 .env.*
+
+# 推送幂等标记可提交（用于 Cloud 防重复）；若不想进仓可改回忽略
+# reports/*.feishu-sent

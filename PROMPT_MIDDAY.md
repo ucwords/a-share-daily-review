@@ -47,5 +47,5 @@
 1. 读 TEMPLATE_MIDDAY.md；对照今日 morning 报告与昨夜复盘（若有）
 2. 联网收集午前走势 + **截至午间成交额 Top100**
 3. 写 `reports/YYYY-MM-DD-midday.md`
-4. 推飞书（Instructions 内 Webhook）
+4. 推飞书（Instructions 内 Webhook）——**整次只 POST 一次**；成功写 `reports/YYYY-MM-DD-midday.feishu-sent`；标记已存在则不再推
 5. 可选 commit：docs(review): YYYY-MM-DD 午盘

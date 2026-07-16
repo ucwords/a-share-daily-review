@@ -47,5 +47,5 @@
 1. 读 TEMPLATE.md
 2. 联网收集：大盘 + **成交额排行 Top100** + 盘后信息
 3. 写 reports/YYYY-MM-DD.md
-4. 推飞书（Instructions 内 Webhook），标题【A股复盘】
+4. 推飞书（Instructions 内 Webhook），标题【A股复盘】——**整次只 POST 一次**；成功写 `reports/YYYY-MM-DD.feishu-sent`；标记已存在则不再推
 5. 可选 commit：docs(review): YYYY-MM-DD 复盘
