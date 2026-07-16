@@ -30,6 +30,7 @@
 
 ## 本地文件
 
+- 排版规范：`FEISHU_LAYOUT.md`（飞书纯文本分区，三任务共用）
 - 早盘：`PROMPT_MORNING.md` / `TEMPLATE_MORNING.md`
 - 午盘：`PROMPT_MIDDAY.md` / `TEMPLATE_MIDDAY.md`
 - 盘后：`PROMPT.md` / `TEMPLATE.md`
